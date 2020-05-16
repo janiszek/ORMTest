@@ -1,0 +1,23 @@
+# Datasource
+spring:
+  datasource:
+    url: jdbc:h2:mem:testDb
+    driver-class-name: org.h2.Driver
+    username:
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate.ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: false
+  #enable console on http://localhost:8080/h2-console/
+  h2:
+    console:
+      enabled: true
+
+  #useful in the application to be able to debugg
+logging:
+  level:
+    root: info
